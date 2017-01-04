@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.jerry.myapplication.MainActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TTP">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:background="@color/common_plus_signin_btn_text_light_disabled"
+            android:id="@+id/TP">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:background="@android:color/holo_green_dark">
+
+                <LinearLayout
+                    android:id="@+id/main_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/main_toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Timer"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="30dp">
+
+        <ImageView
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:src="@drawable/clock"
+            android:id="@+id/clock"
+            android:baselineAlignBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="❮ Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:textSize="30sp"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/holo_blue_light"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/clock"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp" />
+
+        <Switch
+            android:text="Auto Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1"
+            android:textColorLink="@android:color/holo_green_light"
+            android:checked="true"
+            android:scrollbarSize="15dp"
+            android:layout_above="@+id/clock"
+            android:layout_toStartOf="@+id/back"
+            android:textStyle="normal|bold" />
+
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/mm"
+            android:layout_marginBottom="142dp"
+            android:layout_above="@+id/back"
+            android:layout_alignEnd="@+id/back"
+            android:layout_marginEnd="55dp" />
+
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_alignTop="@+id/mm"
+            android:layout_alignStart="@+id/back"
+            android:id="@+id/ss" />
+
+        <TextView
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_alignBottom="@+id/mm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:textStyle="normal|bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:text="(min / sec)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/ss"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

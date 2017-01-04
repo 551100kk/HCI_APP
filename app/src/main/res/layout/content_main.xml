@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jerry.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:text="JAN 1   Friday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Relaxing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/T01"
+        android:layout_marginTop="28dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:layout_marginStart="25dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:text="History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cloud"
+        android:layout_alignLeft="@+id/cloud"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold|italic"
+        android:fontFamily="sans-serif"
+        android:id="@+id/history" />
+
+    <TextView
+        android:text="Timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/clock"
+        android:layout_alignLeft="@+id/clock"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold|italic"
+        android:fontFamily="sans-serif"
+        android:id="@+id/timer" />
+
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:layout_marginBottom="18dp"
+        android:layout_above="@+id/history"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/bright"
+        android:id="@+id/bot"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/cloud"
+        android:id="@+id/cloud"
+        android:layout_above="@+id/bot"
+        android:layout_alignEnd="@+id/bot" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/timer"
+        android:id="@+id/clock"
+        android:layout_above="@+id/bot"
+        android:layout_alignStart="@+id/bot" />
+
+    <TextView
+        android:text="Dsitance :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distance"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/bot" />
+
+    <TextView
+        android:text="Brightness :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bright"
+        android:layout_above="@+id/distance"
+        android:layout_alignStart="@+id/distance" />
+
+    <TextView
+        android:text="Disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/bot" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:src="@drawable/sleeping"
+        android:id="@+id/sleeping"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/T01"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:text="30 : 00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/countdown"
+        android:textStyle="normal|bold|italic"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/sleeping"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
